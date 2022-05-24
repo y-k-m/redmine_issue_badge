@@ -20,9 +20,9 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 
 require 'redmine'
-require 'issue_badge/application_hooks'
-require 'issue_badge/my_account_hooks'
-require 'issue_badge/my_controller_patch'
+require File.expand_path('../lib/issue_badge/application_hooks', __FILE__)
+require File.expand_path('../lib/issue_badge/my_account_hooks', __FILE__)
+require File.expand_path('../lib/issue_badge/my_controller_patch', __FILE__)
 
 # NOTE: Keep error message for a while to support Redmine3.x users.
 def issue_badge_version_message(original_message = nil)
